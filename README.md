@@ -35,3 +35,15 @@ Windows 10/11
 .NET Framework 4.8
 Administrator privileges (for registry and powercfg changes)
 Visual Studio 2022 or newer (for building)
+
+
+🛠️ How It Works
+Registry Edits
+Modern Standby Toggle:
+HKLM\SYSTEM\CurrentControlSet\Control\Power\PlatformAoAcOverride
+
+PowerShell Commands:
+powercfg /hibernate on|off
+powercfg /change standby-timeout-ac|dc
+powercfg /change monitor-timeout-ac|dc
+powercfg /setacvalueindex /setdcvalueindex for USB suspend
